@@ -26,7 +26,8 @@ function Login() {
 
             const data = await response.json();
             setError(null);
-
+            localStorage.setItem('token', data.token);
+            localStorage.setItem('username', username);
             if (data.role === 'designer') {
                 navigate('/designer-dashboard');
             } else if (data.role === 'player') {

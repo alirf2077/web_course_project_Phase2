@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react';
 import ScoreItem from './ScoreItem';
 
 function Scoreboard() {
-  const [scores, setScores] = useState([]); // State to hold the scores
-  const [loading, setLoading] = useState(true); // State to track loading
-  const [error, setError] = useState(null); // State to track errors
+  const [scores, setScores] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Fetch scores from the API
   useEffect(() => {
     const fetchScores = async () => {
       try {
@@ -20,28 +19,25 @@ function Scoreboard() {
         }
 
         const data = await response.json();
-        setScores(data); // Set the scores state with the API response
+        setScores(data);
       } catch (err) {
-        setError(err.message); // Handle errors
+        setError(err.message);
       } finally {
-        setLoading(false); // Stop loading
+        setLoading(false);
       }
     };
 
     fetchScores();
   }, []);
 
-  // Render loading state
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  // Render error state
   if (error) {
     return <div>Error: {error}</div>;
   }
 
-  // Render the leaderboard
   return (
     <div className="scoreboard">
       <h3>Leaderboard</h3>
