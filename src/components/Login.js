@@ -34,6 +34,7 @@ function Login() {
             <label htmlFor="rememberMe" className="form-check-label">Remember Me</label>
           </div> */}
           <button type="submit" className="btn btn-custom w-100">Login</button>
+          <button type="submit" className="btn btn-custom w-100">Signup</button>
           <div className="text-center mt-3">
             <a href="#" className="text-decoration-none forgot-password-link">Forgot Password?</a>
           </div>
