@@ -66,6 +66,7 @@ function Login() {
                         />
                     </div>
                     <button type="submit" className="btn btn-custom w-100">Login</button>
+                    <button type="submit" className="btn btn-custom w-100">Signup</button>
                     {error && <div className="text-danger mt-2">{error}</div>}
                 </form>
             </div>
