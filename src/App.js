@@ -13,12 +13,13 @@ import './styles/login_styles.css';
 function App() {
   return (
     <Router>
-      <div className="main-content">
         <Routes>
           <Route
             path="/"
             element={
               <>
+                <div className="main-content">
+
                 <Sidebar />
 
                 <button id="loginBtn" className="btn btn-login">
@@ -26,12 +27,13 @@ function App() {
                 </button>
                 <Welcome />
                 <TrendingQuestions />
+                </div>
+
               </>
             }
           />
           <Route path="/login" element={<Login />} />
         </Routes>
-      </div>
     </Router>
   );
 }
