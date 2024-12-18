@@ -9,6 +9,10 @@ function QuestionManagement() {
     'Who discovered gravity?',
     'Which planet is closest to the sun?',
   ]);
+  const sidebarOptions = [
+    { label: 'Home', link: '/designer-dashboard' },
+  ];
+
   const categories = ['Mathematics', 'Science', 'History'];
   const relatedQuestions = questions;
 
@@ -18,7 +22,7 @@ function QuestionManagement() {
 
   return (
     <div className="question-management-page">
-      <Sidebar />
+      <Sidebar options={sidebarOptions} />
       <div className="question-content">
         <h1>Manage Questions</h1>
         <QuestionList questions={questions} />

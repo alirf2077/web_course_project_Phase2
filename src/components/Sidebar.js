@@ -1,12 +1,14 @@
-// src/components/Sidebar.js
 import React from 'react';
 
-function Sidebar() {
+function Sidebar({ options }) {
   return (
     <div className="sidebar">
       <h3>Menu</h3>
-      <a href="home.html">Home</a>
-      <a href="scoreboard.html">Scoreboard</a>
+      {options.map((option, index) => (
+        <a key={index} href={option.link} target={option.newTab ? "_blank" : "_self"}>
+          {option.label}
+        </a>
+      ))}
     </div>
   );
 }
