@@ -7,7 +7,7 @@ function Login() {
     const [success, setSuccess] = useState(false);
 
     const handleLogin = async (e) => {
-        e.preventDefault(); // جلوگیری از رفرش صفحه
+        e.preventDefault();
 
         try {
             const response = await fetch('http://localhost:5000/auth/login', {
@@ -25,9 +25,9 @@ function Login() {
             }
 
             const data = await response.json();
-            setError(null); // پاک کردن خطاها
+            setError(null);
             setSuccess(true);
-            console.log('Token:', data.token); // توکن دریافت‌شده را می‌توانید ذخیره کنید
+            console.log('Token:', data.token);
         } catch (err) {
             console.error('Error:', err);
             setError('An error occurred. Please try again.');
