@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
-    const [success, setSuccess] = useState(false);
+    const navigate = useNavigate();
 
     const handleLogin = async (e) => {
         e.preventDefault();
-
         try {
             const response = await fetch('http://localhost:5000/auth/login', {
                 method: 'POST',
@@ -26,11 +26,15 @@ function Login() {
 
             const data = await response.json();
             setError(null);
-            setSuccess(true);
-            console.log('Token:', data.token);
+
+            if (data.role === 'designer') {
+                navigate('/designer-dashboard');
+            } else if (data.role === 'player') {
+                navigate('/player');
+            }
         } catch (err) {
             console.error('Error:', err);
-            setError('An error occurred. Please try again.');
+            setError('An error occurred. Please check your API connection.');
         }
     };
 
@@ -63,10 +67,6 @@ function Login() {
                     </div>
                     <button type="submit" className="btn btn-custom w-100">Login</button>
                     {error && <div className="text-danger mt-2">{error}</div>}
-                    {success && <div className="text-success mt-2">Login successful!</div>}
-                    <div className="text-center mt-3">
-                        <a href="#" className="text-decoration-none forgot-password-link">Forgot Password?</a>
-                    </div>
                 </form>
             </div>
         </div>
