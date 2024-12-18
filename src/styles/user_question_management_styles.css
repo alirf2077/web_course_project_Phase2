@@ -1,0 +1,77 @@
+.user-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .user-card h3 {
+    margin-bottom: 10px;
+    color: #007bff;
+  }
+
+  .user-card p {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .options-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+
+  .options-container h3 {
+    margin-bottom: 20px;
+  }
+
+  .options-container a {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 10px 0;
+  }
+
+  .options-container a:hover {
+    background-color: #0056b3;
+  }
+
+  /* Container Styling */
+.options-container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Heading Styling */
+.options-container h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Button Styling */
+.btn {
+  border-radius: 50px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+  height: 30px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
