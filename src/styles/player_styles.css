@@ -1,0 +1,33 @@
+  .user-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .user-card h3 {
+    margin-bottom: 10px;
+    color: #007bff;
+  }
+
+  .user-card p {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .trending-questions {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+
+  .trending-question-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+
+  .trending-question-item:last-child {
+    border-bottom: none;
+  }

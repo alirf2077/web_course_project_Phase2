@@ -1,22 +1,23 @@
-// src/components/TrendingQuestions.js
 import React from 'react';
+import TrendingQuestionItem from './TrendingQuestionItem';
 
 function TrendingQuestions() {
+  const questions = [
+    { question: "What is the capital of France?", answers: 50 },
+    { question: "Who discovered gravity?", answers: 40 },
+    { question: "Which planet is known as the Red Planet?", answers: 35 },
+  ];
+
   return (
     <div className="trending-questions">
       <h3>Trending Questions</h3>
-      <div className="trending-question-item">
-        <p><strong>What is the capital of France?</strong></p>
-        <span>Answers: 50</span>
-      </div>
-      <div className="trending-question-item">
-        <p><strong>Who discovered gravity?</strong></p>
-        <span>Answers: 40</span>
-      </div>
-      <div className="trending-question-item">
-        <p><strong>Which planet is known as the Red Planet?</strong></p>
-        <span>Answers: 35</span>
-      </div>
+      {questions.map((q, index) => (
+        <TrendingQuestionItem
+          key={index}
+          question={q.question}
+          answers={q.answers}
+        />
+      ))}
     </div>
   );
 }
