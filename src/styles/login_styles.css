@@ -1,0 +1,107 @@
+/* General Page Styles */
+body {
+  background-color: #f7f9fc;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Login Container Styles */
+.login-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 1000px;
+  margin-right: 140px;
+  width: 450px;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 8px; /* Space between label and input */
+}
+
+.form-control {
+  border-radius: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Checkbox Styles */
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between checkbox and label */
+}
+
+.form-check-label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Button Styles */
+.btn-custom {
+  background-color: #007bff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+
+/* Forgot Password Link */
+.forgot-password-link {
+  font-size: 0.9rem;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.forgot-password-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.mt-3 {
+  margin-top: 15px;
+}
