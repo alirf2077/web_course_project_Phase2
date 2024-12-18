@@ -1,0 +1,45 @@
+.trending-questions {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  margin-left: 4%; /* Adjust for sidebar width */
+  margin-right: 4%; /* Adjust for sidebar width */
+
+  margin-top: 4%;
+  padding: 1%;
+  
+}
+
+/* src/components/Welcome.css */
+.welcome-line {
+  font-size: 2rem;
+  text-align: left;
+  margin-top: 1%;
+  margin-left: 4%;
+  color: #333;
+}
+
+
+
+.btn-login {
+  float: right;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.btn-login:hover {
+  background-color: #0056b3;
+}
+
+.trending-question-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.trending-question-item:last-child {
+  border-bottom: none;
+}
